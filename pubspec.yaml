@@ -6,14 +6,14 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  google_fonts: 2.1.0
+  google_fonts: ^5.1.0
   provider:
 
 dev_dependencies:
@@ -27,3 +27,8 @@ flutter:
 
   assets:
     - lib/images/
+    - lib/images/avocado.png
+    - lib/images/banana.png
+    - lib/images/chicken.png
+    - lib/images/troli.png
+    - lib/images/water.png

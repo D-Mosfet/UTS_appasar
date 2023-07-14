@@ -18,9 +18,14 @@ class CartModel extends ChangeNotifier {
   get shopItems => _shopItems;
 
   // add item to cart
-  void addItemToCart(int index) {
-    _cartItems.add(_shopItems[index]);
-    notifyListeners();
+  void _getDataFromStrapi() async {
+    var response =
+        await http.get(Uri.parse("http://localhost:1337/api/shopitem"));
+    dataJson = await jsonDecode(response.body);
+    print(dataJson["meta"]["pagination"]["total"]);
+    setState(() {
+      total = dataJson["meta"]["pagination"]["total"];
+    });
   }
 
   // remove item from cart
